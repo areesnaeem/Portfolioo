@@ -92,7 +92,7 @@ select owneraddress
 from nashville;
 
 -- Now we can use TRIM and substring_index functions to seperate them
-
+-- Nested substring functions
 SELECT 
     TRIM(SUBSTRING_INDEX(owneraddress, ',', 1)) AS address,
     TRIM(SUBSTRING_INDEX(SUBSTRING_INDEX(owneraddress, ',', 2), ',', -1)) AS city,
